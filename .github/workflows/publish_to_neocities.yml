@@ -1,36 +1,27 @@
 name: Publish to reactsquad.neocities.org
 
-# only run on changes to master
+# only run on changes to main
 on:
+  workflow_dispatch:
   push:
     branches:
       - staging
-
-concurrency: # prevent concurrent deploys doing strange things
-  group: deploy-to-neocities
-  cancel-in-progress: true
+    # only run deploys when public changes
+    paths:
+      - '/**'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Neocities + GitHub (GitHub Actions)
-      uses: actions/checkout@v3
-    # Set up any tools and build steps here
-    # This example uses a Node.js toolchain to build a site
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: lts/*
-    - name: Build with Dependencies
-      run: |
-        npm i
-        npm run build
+    - uses: actions/checkout@v1
     # When the dist_dir is ready, deploy it to neocities
-    - name: Publish to Neocities repository
+    - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v1
       with:
         api_token: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
         cleanup: true
         dist_dir: staging
+
+# related dependency workaround by bechnokid/neocities
