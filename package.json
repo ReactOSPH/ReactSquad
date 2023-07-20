@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "run-p build:*",
     "build:action": "rm -rf dist && esbuild scripts.js --bundle --platform=node --target=node16 --sourcemap=external --outdir=dist",
-    "build:site": "siteup --src . --dest staging",
+    "build:site": "siteup --src . --dest public",
     "watch": "run-p watch:*",
-    "watch:serve": "browser-sync start --server 'staging' --files 'staging'",
+    "watch:serve": "browser-sync start --server 'public' --files 'public'",
     "watch:site": "npm run build:site -- -w",
     "start": "npm run watch"
   },
