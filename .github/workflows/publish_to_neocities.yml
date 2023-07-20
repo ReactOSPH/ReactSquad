@@ -15,7 +15,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Neocities + GitHub (GitHub Actions)
+      uses: actions/checkout@v3
     # Set up any tools and build steps here
     # This example uses a Node.js toolchain to build a site
     - name: Set up Node.js
