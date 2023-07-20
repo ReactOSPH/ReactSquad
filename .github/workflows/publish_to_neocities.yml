@@ -4,8 +4,7 @@ name: Publish to reactsquad.neocities.org
 on:
   workflow_dispatch:
   push:
-    branches:
-      - staging
+    branches: ["staging"]
     # only run deploys when public changes
     paths:
       - '/**'
@@ -22,6 +21,6 @@ jobs:
       with:
         api_token: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
         cleanup: true
-        dist_dir: staging
+        dist_dir: /
 
 # related dependency workaround by bechnokid/neocities
