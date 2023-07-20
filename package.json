@@ -12,7 +12,7 @@
     "build": "npm run clean && run-p build:*",
     "build:css": "postcss src/style.css -o staging/style.css --config postcss-config.js",
     "build:js": "browserify staging/scripts.js --debug | exorcist staging/scripts.js.map > staging/scripts.js",
-    "build:static": "cpx 'staging/**/*.{html,png,jpg,svg}' staging",
+    "build:static": "cpx 'staging/**/*.{html,png,jpg}' staging",
     "watch": "npm run clean && run-p watch:*",
     "watch:css": "run-s 'build:css -- --watch'",
     "watch:js": "budo staging/scripts.js:scripts.js --dir staging --live --open",
