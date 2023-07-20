@@ -7,10 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run clean && run-p build:*",
     "build:action": "rm -rf dist && esbuild neocities-publish.js --bundle --platform=node --target=node16 --sourcemap=external --outdir=dist",
-    "build:site": "siteup --src . --dest public",
-    "clean": "rm -rf public && mkdir -p public",
+    "build:site": "siteup --src . --dest staging",
+    "clean": "rm -rf staging && mkdir -p staging",
     "watch": "npm run clean && run-p watch:*",
-    "watch:serve": "browser-sync start --server 'public' --files 'public'",
+    "watch:serve": "browser-sync start --server 'staging' --files 'staging'",
     "watch:site": "npm run build:site -- -w",
     "start": "npm run watch"
   },

@@ -9,7 +9,7 @@ inputs:
     required: true
   dist_dir:
     description: 'Local folder to deploy to neocities'
-    default: 'public'
+    default: 'staging'
     required: true
   cleanup:
     description: Delete orphaned files on neocities that don't exist in distDir
