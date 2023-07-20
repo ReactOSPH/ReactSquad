@@ -7,7 +7,7 @@ on:
     branches: ["staging"]
     # only run deploys when public changes
     paths:
-      - '/**'
+      - 'staging/**'
 
 jobs:
   deploy:
@@ -21,6 +21,6 @@ jobs:
       with:
         api_token: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
         cleanup: true
-        dist_dir: /
+        dist_dir: staging
 
 # related dependency workaround by bechnokid/neocities
