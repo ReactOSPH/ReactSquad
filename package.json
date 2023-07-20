@@ -12,5 +12,12 @@
   },
   "keywords": [],
   "author": "ReactSquad",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": "^8.3.1"
+  },
+  "dependencies": {
+    
+  }
 }
