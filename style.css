@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #0c4485;
+  color: white;
+}
+
+body {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: medium;
+  background-image: url(media/texture-wb.png);
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: repeat;
+  font-family: 'Roboto Slab', serif;
+}
+
+#introLoad {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #0c4485;
+  -webkit-transition: 2.5s;
+  -moz-transition: 2.5s;
+  -o-transition: 2.5s;
+  transition: 2.5s;
+  box-shadow: 0 7.5px 10px #595959;
+}
+.rosIcon {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  padding: 38px;
+}
+.loading {
+  -webkit-animation: fade 2.5s infinite;
+  animation: fade 2.5s infinite;
+}
+@-webkit-keyframes fade {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+@keyframes fade {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.cookieNotice {
+  width: 100%;
+  padding: 5px 15px;
+  background-color: #595959;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #0c4485;
+  color: #fff;
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 7.5px 10px #595959;
+}
+.headCol {
+  float: left;
+  width: 50%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.headRow:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.headLogo {
+  justify-content: left;
+  padding: 15px;
+}
+.previewMark {
+  padding: 0 0 0 20px;
+  font-size: xx-large;
+  font-weight: 100;
+  display: block;
+}
+.headNav {
+  justify-content: right;
+  padding: 25px;
+}
+@media screen and (max-width: 875px) {
+  .headCol {
+    width: 100%;
+    height: fit-content;
+  }
+  .headLogo, .headNav {
+    justify-content: center;
+    padding: 15px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .previewMark {
+    display: none;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 5px 15px;
+  background-color: #595959;
+  text-align: center;
+  box-shadow: 0 -7.5px 10px #595959;
+}
+
+.rsquad-logo {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+}
+
+.URLspan {
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.urlHead:link {
+  color: #fff;
+  text-decoration: none;
+}
+.urlHead:visited {
+  color: #fff;
+  text-decoration: none;
+}
+.urlHead:hover {
+  color: #aaa;
+  text-decoration: none;
+}
+.urlHead:active {
+  color: #0c4485;
+  text-decoration: none;
+}
+
+.rosPH {
+  background: linear-gradient(to bottom, #0038a8 50%, #ce1126 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.rosIT {
+  background: linear-gradient(to right, #008c45 33.33%, #f4f5f0 33.33% 66.66%, #cd212a 66.66%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.specialURLS {
+  padding: 5px 10px;
+  background-color: #ffffffa0;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.floatfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.hero {
+  text-align: center;
+  padding: 250px 50px;
+}
+
+.intro {
+  width: 100%;
+  background-color: #0c4485;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 20px #595959;
+}
+
+.blogLayout {
+  width: 875px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 250px 50px 100px 50px;
+}
+
+.blogSel {
+  margin: 25px 0;
+  padding: 50px;
+  background-color: #0c4485;
+  border-radius: 10px;
+}
+
+code {
+  padding: 2.5px 5px;
+  background-color: #ffffff30;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* SITE-WIDE RESPONSIVE LAYOUTS */
+@media screen and (min-width: 768px) {
+  body {
+    font-size: large;
+  }
+}
+@media screen and (min-width: 1080px) {
+  body {
+    font-size: larger;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body {
+    font-size: x-large;
+  }
+}
+@media screen and (min-width: 2160px) {
+  body {
+    font-size: xx-large;
+  }
+}

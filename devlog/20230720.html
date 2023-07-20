@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ReactSquad">
+    <title>The redesign efforts (so far)</title>
+    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" href="https://reactsquad.neocities.org/media/favicon.png" type="image/x-icon">
+    <style type="text/css">
+      /* custom css here */
+      .tbmassoc {
+        width: 150px;
+        max-width: 100%;
+        height: auto;
+      }
+      .pubAuthor {
+        width: .75em;
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+      .centerImage {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+    </style>
+    <meta name="theme-color" content="#0c4485">
+    <meta name="msapplication-TileColor" content="#0c4485">
+    <meta name="msapplication-navbutton-color" content="#0c4485">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0c4485">
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> <!-- jquery dependency -->
+    <script src="../scripts.js" type="text/javascript"></script>
+  </head>
+  <body onload="introduce()">
+    <div id="introLoad">
+      <div id="load">
+        <img class="rosIcon loading" src="../media/reactos_solid.svg" alt="">
+      </div>
+    </div>
+    <header>
+      <div class="headRow">
+        <div class="headCol headLogo">
+          <h2>ReactSquad DevLog</h2>
+          <p class="previewMark">Preview</p>
+        </div>
+      </div>
+    </header>
+    <div class="blogLayout">
+      <h1>The redesign efforts (so far)</h1>
+      <h4>
+        <img class="pubAuthor" src="../media/thebelovedmoon.jpg" alt=""> thebelovedmoon, Co-founder
+        <br>
+        20 Jul 2023
+      </h4>
+      <br>
+      <p>
+        It's been a while since we updated our website to make it more appealing to the users, so here's a major
+        update on what we're working on.
+      </p>
+      <h2>The design overhaul</h2>
+      <p>
+        While initially planning for the redesign to say goodbye to the <code>1.0 Initial Release</code> look
+        (we'll call it <code>1.1 "Redesign"</code>), I was planning on craving the design to suit the themes,
+        hence, I chose the dynamic route where I implement both light and dark modes. Pictured here is what
+        they used to look like in three versions up to the current state.
+      </p>
+      <p>
+        <img class="centerImage" src="../media/devlog/20230720/what_has_changed.png" alt="">
+      </p>
+      <p>
+        I somehow forgot to update the site after a long time (even though I said I had to) due to my busy days
+        at VTubing -- well, who would've known that a co-founder of a project aiming to introduce ReactOS is a
+        VTuber -- but behind-the-scenes, I was trying many ways to improve the site. Through various efforts and
+        attempts at improving the design from the other ones (most notably #MamaNyoSquad's Venus Island Diaries),
+        I was finally able to implement them to the site!
+      </p>
+      <p>
+        This list may be updated and detailed in a future DevLog:
+        <ul>
+          <li>Introduced the splash screen on all pages</li>
+          <li>Implemented <code>background-clip</code> to distinguish PH and IT text elements</li>
+        </ul>
+      </p>
+      <h2>Blog post in DevLogs</h2>
+      <p>
+        Some of the blog posts are carried over here as part of the design overhaul! Which means that it'll be a
+        'unified' experience with testings, updates and other shenanigans in context of ReactOS and ReactSquad.
+      </p>
+      <h2>Neocities + GitHub</h2>
+      <p>
+        As a part of the redesign plans, I've recently set up a GitHub Organization to take care of its individual
+        repository, as well as when we can provide commits to ReactOS in the future. With this, I've researched a
+        number of ways to integrate it to Neocities for a seamless publish. You can take a look at the
+        <a class="urlHead" rel="noopener noreferrer" href="../.github/workflows/publish_to_neocities.yml">YML</a>
+        for details.
+      </p>
+      <p>
+        <img class="centerImage" src="../media/devlog/20230720/neocities_github.png" alt="">
+      </p>
+      <p>
+        I've recently backed up the previous repo before I can publish it straight from GitHub because I want to
+        remove the previous instances and everything before moving forward with the commit.
+      </p>
+      <h2>Future plans</h2>
+      <p>
+        Below are the future implementations that I might consider before setting it for a full release:
+        <ul>
+          <li>ReactOS on the News</li>
+          <li>ReactSquad about page</li>
+          <li>Twitter live feed (still deciding because of recent API changes, thanks Elon)</li>
+          <li>Light mode</li>
+        </ul>
+      </p>
+      <br>
+      <p>
+        Thanks for reading through this blog! It's been two days since I worked on it, so I'm excited to share more
+        updates as times go by! Of course, more testing with ReactOS as we look forward to the debut of ReactSquad
+        2.0!
+      </p>
+    </div>
+    <footer>
+      <p>
+        <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="https://github.com/ReactOSPH" target="_blank">GitHub</a></span>
+        <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="mailto:reactsquad@outlook.com" target="_blank">Email</a></span>
+        <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="javascript:void(0)" onclick="MIT()">MIT License</a></span>
+      </p>
+      <p>
+        <a rel="noopener noreferrer" href="https://thebelovedmoon.wixsite.com/tbmassoc?lang=en" target="_blank">
+          <img class="tbmassoc" src="https://mamanyosquad.github.io/media/svg/tbmassoc.svg" alt="a tbmassoc brand">
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>

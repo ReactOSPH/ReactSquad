@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ReactSquad">
+    <title>ReactSquad</title>
+    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" href="https://reactsquad.neocities.org/media/favicon.png" type="image/x-icon">
+    <style type="text/css">
+      /* custom css here */
+      .ReactOS {
+        width: 500px;
+        max-width: 100%;
+        height: auto;
+      }
+      .tbmassoc {
+        width: 150px;
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+    <meta name="theme-color" content="#0c4485">
+    <meta name="msapplication-TileColor" content="#0c4485">
+    <meta name="msapplication-navbutton-color" content="#0c4485">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0c4485">
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> <!-- jquery dependency -->
+    <script src="../scripts.js" type="text/javascript"></script>
+  </head>
+  <body onload="introduce()">
+    <div id="introLoad">
+      <div id="load">
+        <img class="rosIcon loading" src="../media/reactos_solid.svg" alt="">
+      </div>
+    </div>
+    <div style="background-color: red; width: 100%; padding: 5px 15px; font-weight: bold; text-align: center;">
+      <p>Questa pagina è in costruzione. Rimanete in attesa della migrazione della nuova esperienza nei prossimi giorni.</p>
+    </div>
+    <header>
+      <div class="headRow">
+        <div class="headCol headLogo">
+          <img class="rsquad-logo" src="../media/ReactSquad_logo.svg" alt="">
+          <p class="previewMark">Anteprima</p>
+        </div>
+        <div class="headCol headNav">
+          <span class="URLspan"><span class="specialURLS"><a class="urlHead rosPH" rel="noopener noreferrer" href="../">PH</a></span></span>
+          <span class="URLspan" style="display: none;"><span class="specialURLS"><a class="urlHead rosIT" rel="noopener noreferrer" href="it">IT</a></span></span>
+          <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="https://github.com/reactos/reactos" target="_blank">Contribuisci</a></span>
+          <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="https://reactos.org" target="_blank">Sito web ROS</a></span>
+          <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="../devlog" target="_blank">DevLog</a></span>
+        </div>
+      </div>
+    </header>
+    <div class="hero">
+      <div style="width: 875px; max-width: 100%; margin: 0 auto;">
+        <h1>La casa di <strong><span class="rosPH">ReactOS-PH</span></strong> e di <strong><span class="rosIT">ReactOS Italia</span></strong></h1>
+        <p>
+          Nuovo aspetto, stesse esperienze! Siamo lieti di avervi qui con noi per presentare <strong>ReactOS</strong>, il
+          sistema operativo gratuito compatibile con Windows!
+        </p>
+        </div>
+    </div>
+    <div class="intro" style="background-image: url('https://reactos.org/sites/default/files/Mizu-Desktop.png'); background-position: center bottom;">
+      <div class="floatfix" style="background: linear-gradient(to bottom, #00000030, #000); padding: 100px 50px;">
+        <div style="width: 750px; max-width: 100%; float: right; text-align: right;"> <!-- floatfix must apply to parent -->
+          <h1>Un sistema operativo a contributo comunitario</h1>
+          <p>
+            In sviluppo dal 1995, ReactOS ha dimostrato che un'alternativa gratuita a Windows può essere realizzata grazie alla
+            passione di molti!
+          </p>
+          <p>
+            Molte caratteristiche hanno reso ReactOS uno dei migliori sistemi operativi alternativi che diversificano l'hardware
+            e il software, tra le altre cose.
+          </p>
+          <p>
+            Nella sua nuova era, ReactOS rimane ancora una <strong>'vera' alternativa a Windows</strong> che può fare passi da
+            gigante per il futuro del FLOSS e non solo.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div style="height: 50px;"></div>
+    <div class="intro" style="background-image: url('https://i0.wp.com/langyaw.com/wp-content/uploads/2016/09/qc-memorial-shrine-1.jpg'); background-position: center center;">
+      <div class="floatfix" style="background: linear-gradient(to bottom, #00000030, #000); padding: 100px 50px;">
+        <div style="width: 750px; max-width: 100%; float: left; text-align: left;"> <!-- floatfix must apply to parent -->
+          <h1>Rappresentare il pubblico Filippino e Italiano</h1>
+          <p>
+            Fondata nel dicembre 2021, ReactSquad si propone di far conoscere ReactOS a più comunità che mai, contribuendo allo
+            stesso tempo allo sviluppo attraverso il test del sistema operativo tramite hardware e software.
+          </p>
+          <p>
+            Un'idea nata dall'esperienza di una persona, il cui obiettivo è quello di unire le due comunità condividendo la stessa
+            esperienza per le generazioni future.
+          </p>
+          <p>
+            Oggi ReactSquad ospita le comunità filippina e italiana nel tentativo di far conoscere meglio i loro contributi
+            nell'intero settore.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div style="height: 50px;"></div>
+    <div class="intro" style="background-image: url('https://literaturwerkstattkreativblog.files.wordpress.com/2018/08/rheda-wiedenbrc3bcck-208-kopie.jpg'); background-position: center top;">
+      <div class="floatfix" style="background: linear-gradient(to bottom, #00000030, #000); padding: 100px 50px;">
+        <div style="width: 750px; max-width: 100%; float: right; text-align: right;"> <!-- floatfix must apply to parent -->
+          <img class="ReactOS" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/ReactOS_logo.svg" alt="ReactOS">
+          <p>
+            Noi di ReactSquad continuiamo a impegnarci a far parte della <strong>La famiglia di comunità ReactOS</strong>, mentre
+            lottiamo insieme per la nuova generazione di FLOSS. Potete dare un'occhiata agli altri:
+          </p>
+          <p>
+            <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="https://mobile.twitter.com/reactos" target="_blank">Principale</a></span>
+            <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="https://mobile.twitter.com/ReactOS_es" target="_blank">Spagna</a></span>
+            <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="https://mobile.twitter.com/reactosgerman" target="_blank">Germania</a></span>
+            <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="https://mobile.twitter.com/reactos_tr" target="_blank">Turchia</a></span>
+            <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="https://mobile.twitter.com/ReactOSJPN" target="_blank">Giaponne</a></span>
+            <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="https://mobile.twitter.com/ReactOSCZSK" target="_blank">Ceco/Slovacco</a></span>
+            <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="https://mobile.twitter.com/reactositalia" target="_blank">Italia</a></span>
+            <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="https://mobile.twitter.com/ReactOSPH" target="_blank">Filippine</a></span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div style="height: 50px;"></div>
+    <footer>
+      <p>
+        Il marchio e il logo ReactOS sono marchi di <strong>ReactOS Deutschland e.V.</strong> Per ulteriori informazioni, vedere
+        <a class="urlHead" rel="noopener noreferrer" href="https://reactos.org/legal" target="_blank">Informazioni Legali</a>.
+      </p>
+      <br>
+      <p>
+        <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="https://github.com/ReactOSPH" target="_blank">GitHub</a></span>
+        <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="mailto:reactsquad@outlook.com" target="_blank">Email</a></span>
+        <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="javascript:void(0)" onclick="MIT()">Licenza MIT</a></span>
+      </p>
+      <p>
+        <a rel="noopener noreferrer" href="https://thebelovedmoon.wixsite.com/tbmassoc?lang=en" target="_blank">
+          <img class="tbmassoc" src="https://mamanyosquad.github.io/media/svg/tbmassoc.svg" alt="a tbmassoc brand">
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>
