@@ -1,13 +1,16 @@
 {
-  "name": "reactsquad",
-  "version": "1.0.0",
-  "description": "",
+  "name": "ReactSquad",
+  "version": "2.0-preview",
+  "description": "ReactSquad, now with a brand new look!",
   "main": "scripts.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run clean && run-p build:*"
+    "build": "npm run clean && run-p build:*",
+    "watch": "npm run clean && run-p watch:*",
+    "clean": "rm -rf public && mkdir -p public",
+    "start": "npm run watch"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "ReactSquad",
+  "license": "MIT"
 }
