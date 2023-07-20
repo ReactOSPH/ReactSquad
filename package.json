@@ -1,24 +1,26 @@
 {
-  "name": "ReactSquad",
+  "name": "reactsquad.neocities.org",
   "version": "2.0.1",
-  "description": "ReactSquad, now with a brand new look!",
+  "description": "The home of ReactOS-PH and ReactOS Italia!",
   "main": "scripts.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "run-p build:*",
-    "build:action": "rm -rf dist && esbuild scripts.js --bundle --platform=node --target=node16 --sourcemap=external --outdir=dist",
+    "build": "npm run clean && run-p build:*",
+    "build:action": "rm -rf dist && esbuild neocities-publish.js --bundle --platform=node --target=node16 --sourcemap=external --outdir=dist",
     "build:site": "siteup --src . --dest public",
-    "watch": "run-p watch:*",
+    "clean": "rm -rf public && mkdir -p public",
+    "watch": "npm run clean && run-p watch:*",
     "watch:serve": "browser-sync start --server 'public' --files 'public'",
     "watch:site": "npm run build:site -- -w",
     "start": "npm run watch"
   },
+  "homepage": "https://reactsquad.neocities.org",
   "keywords": [],
   "author": "ReactSquad",
   "license": "MIT",
-  "engines": {
-    "node": "*",
-    "npm": "*"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ReactOSPH/ReactSquad.git"
   },
   "dependencies": {
     "@actions/core": "1.10.0",
@@ -33,9 +35,20 @@
     "auto-changelog": "^2.0.0",
     "browser-sync": "^2.27.7",
     "dependency-check": "^4.1.0",
-    "esbuild": "^0.18.0",
-    "gh-release": "^7.0.2",
+    "gh-release": "^7.0.0",
     "npm-run-all2": "^6.0.0",
-    "standard": "^17.0.0"
-  }
+    "standard": "^17.0.0",
+    "esbuild": "^0.18.0"
+  },
+  "engines": {
+    "node": "*",
+    "vscode": "*",
+    "npm": "*"
+  },
+  "standard": {
+    "ignore": [
+      "dist"
+    ]
+  },
+  "_comment": "most code is from bcomnes/deploy-to-neocities"
 }
