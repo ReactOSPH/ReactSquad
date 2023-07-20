@@ -1,26 +1,26 @@
 name: Publish to reactsquad.neocities.org
 
-# only run on changes to main
+# runs when committed to staging
 on:
   workflow_dispatch:
   push:
     branches: ["staging"]
-    # only run deploys when public changes
+    # run changes on a specific directory
     paths:
       - 'staging/**'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    # When the dist_dir is ready, deploy it to neocities
-    - name: Deploy to neocities
+    - name: Neocities + GitHub (GitHub Actions)
+      uses: actions/checkout@v1
+    # dist_dir is staged to Neocities
+    - name: Publish to Neocities Repository
       uses: bcomnes/deploy-to-neocities@v1
       with:
         api_token: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
         cleanup: true
         dist_dir: staging
 
-# related dependency workaround by bechnokid/neocities
+# dependency workaround by bechnokid/neocities
