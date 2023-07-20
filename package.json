@@ -5,10 +5,10 @@
   "main": "scripts.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run clean && run-p build:*",
+    "build": "run-p build:*",
     "build:action": "rm -rf dist && esbuild scripts.js --bundle --platform=node --target=node16 --sourcemap=external --outdir=dist",
     "build:site": "siteup --src . --dest staging",
-    "watch": "npm run clean && run-p watch:*",
+    "watch": "run-p watch:*",
     "watch:serve": "browser-sync start --server 'staging' --files 'staging'",
     "watch:site": "npm run build:site -- -w",
     "start": "npm run watch"
@@ -33,9 +33,9 @@
     "auto-changelog": "^2.0.0",
     "browser-sync": "^2.27.7",
     "dependency-check": "^4.1.0",
-    "gh-release": "^7.0.0",
+    "esbuild": "^0.18.0",
+    "gh-release": "^7.0.2",
     "npm-run-all2": "^6.0.0",
-    "standard": "^17.0.0",
-    "esbuild": "^0.18.0"
+    "standard": "^17.0.0"
   }
 }
