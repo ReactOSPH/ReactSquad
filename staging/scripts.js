@@ -3,7 +3,7 @@ function introduce() {
   setTimeout(function() {
     document.getElementById("load").remove();
     document.getElementById("introLoad").style.width = "0";
-  }, 5000);
+  }, 1000);
 }
 
 // cookie consent, code from https://blog.formpl.us/how-to-create-a-simple-cookie-consent-pop-up-for-your-website-dad17a174b60
