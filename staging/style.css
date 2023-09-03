@@ -168,11 +168,13 @@ footer {
 .rosPH {
   background: linear-gradient(to bottom, #0038a8 50%, #ce1126 50%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .rosIT {
   background: linear-gradient(to right, #008c45 33.33%, #f4f5f0 33.33% 66.66%, #cd212a 66.66%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
