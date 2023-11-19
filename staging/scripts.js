@@ -4,6 +4,7 @@ function introduce() {
     document.getElementById("load").remove();
     document.getElementById("introLoad").style.width = "0";
   }, 1000);
+  logTime();
 }
 
 // cookie consent, code from https://blog.formpl.us/how-to-create-a-simple-cookie-consent-pop-up-for-your-website-dad17a174b60
