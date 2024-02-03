@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ReactSquad">
+    <title>What happened during our disappearance for the last few months</title>
+    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" href="https://reactsquad.neocities.org/media/favicon.png" type="image/x-icon">
+    <style type="text/css">
+      /* custom css here */
+      .pubAuthor {
+        width: .75em;
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+      }
+      .centerImage {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+    </style>
+    <meta name="theme-color" content="#0c4485">
+    <meta name="msapplication-TileColor" content="#0c4485">
+    <meta name="msapplication-navbutton-color" content="#0c4485">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0c4485">
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" type="text/javascript"></script> <!-- jquery dependency -->
+    <script src="../scripts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      function switchLang20240203() {
+        // related stackoverflow: https://stackoverflow.com/questions/6076576/how-to-execute-a-js-function-based-on-url-hash-urlnameoffunction
+        var hash = (window.location.hash).replace('#', '');
+        if (hash.length != 0 && hash == "en") {
+          switchToEN();
+        }
+        else if (hash.length != 0 && hash == "it") {
+          switchToIT();
+        }
+      }
+      function switchToEN() {
+        document.getElementById("en").style.display = "block";
+        document.getElementById("it").style.display = "none";
+        backtoTop();
+      }
+      function switchToIT() {
+        document.getElementById("en").style.display = "none";
+        document.getElementById("it").style.display = "block";
+        backtoTop();
+      }
+      function backtoTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </head>
+  <body onload="introduce()">
+    <div id="introLoad">
+      <div id="load">
+        <img class="rosIcon loading" src="../media/reactos_solid.svg" alt="">
+      </div>
+    </div>
+    <header>
+      <div class="headRow">
+        <div class="headCol headLogo">
+          <h2>ReactSquad DevLog</h2>
+          <p class="previewMark">Preview</p>
+        </div>
+      </div>
+    </header>
+    <div id="en" class="blogLayout" style="display: block;"> <!-- EN -->
+      <h1>What happened during our disappearance for the last few months</h1>
+      <h4>
+        <img class="pubAuthor" src="../media/thebelovedmoon.jpg" alt=""> thebelovedmoon, Co-founder
+        <br>
+        3 Feb 2024
+      </h4>
+      <br>
+      <p>
+        Our sincerest apologies for being missing in action for the last few months since we've announced
+        our return to socials following the migration of our operations to our new workstation. To give
+        you all an all-in-one recap on what has happened on our end:
+      </p>
+      <h2>The VTubing venture</h2>
+      <p>
+        As you may have noticed from my main account on X, I've been focusing much on my VTubing career as
+        I cater to more audience in this fashion -- not to mention that I've already expanded my roster to
+        introduce more characters and give everything a new overhaul for the upcoming year to follow.
+      </p>
+      <p>
+        So far it's been a fulfilling experience at hand, and I'm having fun in doing all these things. But
+        even after all that, I still feel guilty that I haven't been caught on other topics like ReactOS.
+        I feel bad for my fellows who have been trying hard to get the word out about the operating system;
+        and on behalf of ReactSquad, I deeply apologize for that.
+      </p>
+      <p>
+        The truth is, it's hard at this current state to juggle between VTubing and PR for ReactOS, but I
+        still find ways to work around it with Emi. (And speaking of him, he's currently out of town for
+        who knows how long, but he's expected to return to this venture soon to get up to speed.)
+      </p>
+      <h2>Website developments</h2>
+      <p>
+        Alongside, the website project has been on pause for quite a while, but we're committed to updating
+        this framework in a few moments at the very least. In addition, we're working on gathering all the
+        information related to ReactOS tests from the day its X account surfaced.
+      </p>
+      <p>
+        In addition, we're excited to add in more feeds that will make the site engaging to the audience.
+        That includes embedding X timelines in our home pages to keep you updated on the latest happenings
+        regarding ReactOS.
+      </p>
+      <h2>PR graphics</h2>
+      <p>
+        Starting December 2023, I've been in the process of making designs in Adobe Photoshop CS6 as a
+        practice to be able to making them in a professional manner. In turn, I've made designs on my VTuber
+        venture as a result, which also has advices from my fellow designers taken into account.
+      </p>
+      <p>
+        With this, we'll be integrating our 2024 graphics moving forward to the new design system that I'll
+        be building in the same infrastructure. Don't worry -- most designs will still carry on that legacy
+        of being with PowerPoint as its roots as we make the transition.
+      </p>
+      <p>
+        Previous designs won't be going anywhere, along with our logos (which I admit we'll also have a
+        little makeover real soon) -- this is to maintain consistency as a brand and as a part of ReactOS
+        Family of Communities.
+      </p>
+      <h2>So, what's next for 2024?</h2>
+      <p>
+        In summary, we'll be working on the following throughout the year:
+        <ul>
+          <li>2024 PR graphics</li>
+          <li>Major website updates</li>
+          <li>Continued gathering of ReactOS tests</li>
+          <li>Active contributions (when possible)</li>
+        </ul>
+      </p>
+      <p>
+        Thus, we remain committed on our mission on expanding the reach and make the world know more about
+        ReactOS -- a community-contributed operating system.
+      </p>
+    </div>
+    <div id="it" class="blogLayout" style="display: none;"> <!-- IT -->
+      <h1>Cosa è successo durante la nostra scomparsa negli ultimi mesi</h1>
+      <h4>
+        <img class="pubAuthor" src="../media/thebelovedmoon.jpg" alt=""> thebelovedmoon, Co-fondatore
+        <br>
+        3 feb 2024
+      </h4>
+      <br>
+      <p>
+        Ci scusiamo sinceramente per la nostra assenza negli ultimi mesi, da quando abbiamo annunciato il
+        nostro ritorno ai social in seguito alla migrazione delle nostre attività alla nuova postazione di
+        lavoro. Per dare a tutti voi un riepilogo completo di ciò che è successo da noi:
+      </p>
+      <h2>L'impresa di VTubing</h2>
+      <p>
+        Come avrete notato dal mio account principale su X, mi sono concentrato molto sulla mia carriera
+        di VTubing, in quanto mi rivolgo a un pubblico più vasto in questo modo -- senza contare che ho
+        già ampliato il mio roster per introdurre altri personaggi e dare a tutto una nuova revisione per
+        l'anno a venire.
+      </p>
+      <p>
+        Finora è stata un'esperienza appagante e mi sto divertendo a fare tutte queste cose. Ma anche dopo
+        tutto questo, mi sento ancora in colpa per non essermi occupato di altri argomenti come ReactOS. Mi
+        sento in colpa per i miei compagni che si sono impegnati a fondo per far conoscere il sistema
+        operativo e, a nome di ReactSquad, mi scuso profondamente per questo.
+      </p>
+      <p>
+        La verità è che in questo momento è difficile destreggiarsi tra VTubing e PR per ReactOS, ma trovo
+        comunque il modo di aggirare il problema con Emi (e a proposito di lui, al momento è fuori città
+        per chissà quanto tempo, ma dovrebbe tornare presto in questa impresa per aggiornarsi).
+      </p>
+      <h2>Sviluppo del sito web</h2>
+      <p>
+        Inoltre, il progetto del sito web è in pausa da un po', ma ci impegniamo ad aggiornare questo
+        framework almeno tra qualche tempo. Inoltre, stiamo lavorando per raccogliere tutte le informazioni
+        relative ai test di ReactOS a partire dal giorno in cui è emerso il suo account X.
+      </p>
+      <p>
+        Inoltre, siamo entusiasti di aggiungere altri feed che renderanno il sito coinvolgente per il
+        pubblico. Questo include l'inserimento di X timeline nelle nostre home page per tenervi aggiornati
+        sugli ultimi avvenimenti riguardanti ReactOS.
+      </p>
+      <h2>Grafica PR</h2>
+      <p>
+        A partire dal dicembre 2023, ho iniziato a realizzare disegni in Adobe Photoshop CS6 come pratica
+        per poterli realizzare in modo professionale. Di conseguenza, ho realizzato dei disegni sulla mia
+        impresa VTuber, tenendo conto anche dei consigli dei miei colleghi designer.
+      </p>
+      <p>
+        In questo modo, integreremo la nostra grafica 2024 con il nuovo sistema di progettazione che
+        costruirò nella stessa infrastruttura. Non preoccupatevi -- la maggior parte dei progetti continuerà
+        a essere basata su PowerPoint anche durante la transizione.
+      </p>
+      <p>
+        I design precedenti non andranno da nessuna parte, così come i nostri loghi (che, lo ammetto,
+        saranno presto rinnovati) -- questo per mantenere la coerenza come marchio e come parte della
+        famiglia di comunità ReactOS.
+      </p>
+      <h2>Allora, cosa c'è da fare per il 2024?</h2>
+      <p>
+        In sintesi, nel corso dell'anno lavoreremo su quanto segue:
+        <ul>
+          <li>Grafica PR 2024</li>
+          <li>Importanti aggiornamenti del sito web</li>
+          <li>Continua raccolta di test di ReactOS</li>
+          <li>Contributi attivi (quando possibile)</li>
+        </ul>
+      </p>
+      <p>
+        Pertanto, continuiamo a impegnarci nella nostra missione di espandere la portata e far conoscere al
+        mondo intero ReactOS -- un sistema operativo distribuito dalla comunità.
+      </p>
+    </div>
+    <footer>
+      <p>
+        <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="https://github.com/ReactOSPH" target="_blank">GitHub</a></span>
+        <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="mailto:reactsquad@outlook.com" target="_blank">Email</a></span>
+        <span class="URLspan"><a class="urlHead" rel="noopener noreferrer" href="javascript:void(0)" onclick="MIT()">MIT License</a></span>
+      </p>
+      <p>
+        <img class="tbmassoc" src="https://mamanyosquad.github.io/media/svg/tbmassoc_notable.svg" alt="" onclick="window.open('https://thebelovedmoon.wixsite.com/tbmassoc?lang=en')">
+      </p>
+    </footer>
+  </body>
+</html>
