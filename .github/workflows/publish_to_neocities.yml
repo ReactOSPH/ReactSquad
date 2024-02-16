@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Neocities + GitHub (GitHub Actions)
-      uses: actions/checkout@v3.5.3
+      uses: actions/checkout@main
     # dist_dir is staged to Neocities
     - name: Publish to Neocities Repository
-      uses: bcomnes/deploy-to-neocities@v1.1.17
+      uses: bcomnes/deploy-to-neocities@master
       with:
         api_token: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
         cleanup: true
