@@ -19,7 +19,7 @@ jobs:
     - name: Publish to Neocities Repository
       uses: bcomnes/deploy-to-neocities@master
       with:
-        api_token: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
+        api_key: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
         cleanup: true
         dist_dir: staging
 
