@@ -9,10 +9,6 @@ on:
     paths:
       - 'staging/**'
 
-concurrency:
-  group: neocities-deploy
-  cancel-in-progress: false
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -21,6 +17,16 @@ jobs:
       uses: actions/checkout@main
       with:
         lfs: true
+    - name: Prepare blank index for cleanup
+      run: |
+        mkdir -p "$RUNNER_TEMP/neocities-empty"
+        : > "$RUNNER_TEMP/neocities-empty/index.html"
+    - name: Clear Neocities files
+      uses: bcomnes/deploy-to-neocities@master
+      with:
+        api_key: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
+        cleanup: true
+        dist_dir: ${{ runner.temp }}/neocities-empty
     - name: Publish staging to Neocities
       uses: bcomnes/deploy-to-neocities@master
       with:
