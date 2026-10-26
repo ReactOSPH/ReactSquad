@@ -21,14 +21,6 @@ jobs:
       uses: actions/checkout@main
       with:
         lfs: true
-    - name: Clear existing Neocities files
-      run: mkdir -p .neocities-empty
-    - name: Delete existing Neocities files
-      uses: bcomnes/deploy-to-neocities@master
-      with:
-        api_key: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
-        cleanup: true
-        dist_dir: .neocities-empty
     - name: Publish staging to Neocities
       uses: bcomnes/deploy-to-neocities@master
       with:
