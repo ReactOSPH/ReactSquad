@@ -19,14 +19,14 @@ jobs:
         lfs: true
     - name: Prepare blank index for cleanup
       run: |
-        mkdir -p "$RUNNER_TEMP/neocities-empty"
-        : > "$RUNNER_TEMP/neocities-empty/index.html"
+        mkdir -p neocities-empty
+        : > neocities-empty/index.html
     - name: Clear Neocities files
       uses: bcomnes/deploy-to-neocities@master
       with:
         api_key: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
         cleanup: true
-        dist_dir: ${{ runner.temp }}/neocities-empty
+        dist_dir: neocities-empty
     - name: Publish staging to Neocities
       uses: bcomnes/deploy-to-neocities@master
       with:
