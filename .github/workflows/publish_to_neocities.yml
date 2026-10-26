@@ -27,6 +27,29 @@ jobs:
         api_key: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
         cleanup: true
         dist_dir: neocities-empty
+    - name: Remove remote directories
+      env:
+        NEOCITIES_API_KEY: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
+      run: |
+        remote_listing="$(curl --fail --silent --show-error \
+          --header "Authorization: $NEOCITIES_API_KEY" \
+          "https://neocities.org/api/list?path=%2F")"
+        printf '%s\n' "$remote_listing" | jq -e '.result == "success"' > /dev/null
+
+        directories="$(printf '%s\n' "$remote_listing" |
+          jq -r '.files[] | select(.is_directory) | .path')"
+        if [ -n "$directories" ]; then
+          delete_args=()
+          while IFS= read -r directory; do
+            [ -n "$directory" ] && delete_args+=(--data-urlencode "filenames[]=$directory")
+          done <<< "$directories"
+          delete_response="$(curl --fail --silent --show-error \
+            --header "Authorization: $NEOCITIES_API_KEY" \
+            --request POST \
+            "${delete_args[@]}" \
+            https://neocities.org/api/delete)"
+          printf '%s\n' "$delete_response" | jq -e '.result == "success"' > /dev/null
+        fi
     - name: Publish staging to Neocities
       uses: bcomnes/deploy-to-neocities@master
       with:
