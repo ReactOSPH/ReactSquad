@@ -5,9 +5,6 @@ on:
   workflow_dispatch:
   push:
     branches: ["staging"]
-    # run changes on a specific directory
-    paths:
-      - 'staging/**'
 
 jobs:
   deploy:
@@ -32,7 +29,7 @@ jobs:
         NEOCITIES_API_KEY: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
       run: |
         remote_listing="$(curl --fail --silent --show-error \
-          --header "Authorization: $NEOCITIES_API_KEY" \
+          --header "Authorization: Bearer $NEOCITIES_API_KEY" \
           "https://neocities.org/api/list?path=%2F")"
         printf '%s\n' "$remote_listing" | jq -e '.result == "success"' > /dev/null
 
@@ -44,7 +41,7 @@ jobs:
             [ -n "$directory" ] && delete_args+=(--data-urlencode "filenames[]=$directory")
           done <<< "$directories"
           delete_response="$(curl --fail --silent --show-error \
-            --header "Authorization: $NEOCITIES_API_KEY" \
+            --header "Authorization: Bearer $NEOCITIES_API_KEY" \
             --request POST \
             "${delete_args[@]}" \
             https://neocities.org/api/delete)"
