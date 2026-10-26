@@ -1,0 +1,73 @@
+/* EXTERNAL CSS IMPORTS */
+@import url("https://tbmassoc.github.io/assets/css/fonts.css");
+
+@font-face {
+  font-family: "ITC Avant Garde Pro";
+  src: url("/assets/fonts/ITCAvantGardePro/ITCAvantGardePro-Bk.otf");
+  font-weight: 400;
+  font-style: normal;
+  font-width: normal;
+}
+@font-face {
+  font-family: "ITC Avant Garde Pro";
+  src: url("/assets/fonts/ITCAvantGardePro/ITCAvantGardePro-BkObl.otf");
+  font-weight: 400;
+  font-style: oblique;
+  font-width: normal;
+}
+@font-face {
+  font-family: "ITC Avant Garde Pro";
+  src: url("/assets/fonts/ITCAvantGardePro/ITCAvantGardePro-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+  font-width: normal;
+}
+@font-face {
+  font-family: "ITC Avant Garde Pro";
+  src: url("/assets/fonts/ITCAvantGardePro/ITCAvantGardePro-BoldObl.otf");
+  font-weight: 700;
+  font-style: oblique;
+  font-width: normal;
+}
+@font-face {
+  font-family: "ITC Avant Garde Pro";
+  src: url("/assets/fonts/ITCAvantGardePro/ITCAvantGardePro-Demi.otf");
+  font-weight: 600;
+  font-style: normal;
+  font-width: normal;
+}
+@font-face {
+  font-family: "ITC Avant Garde Pro";
+  src: url("/assets/fonts/ITCAvantGardePro/ITCAvantGardePro-DemiObl.otf");
+  font-weight: 600;
+  font-style: oblique;
+  font-width: normal;
+}
+@font-face {
+  font-family: "ITC Avant Garde Pro";
+  src: url("/assets/fonts/ITCAvantGardePro/ITCAvantGardePro-Md.otf");
+  font-weight: 500;
+  font-style: normal;
+  font-width: normal;
+}
+@font-face {
+  font-family: "ITC Avant Garde Pro";
+  src: url("/assets/fonts/ITCAvantGardePro/ITCAvantGardePro-MdObl.otf");
+  font-weight: 500;
+  font-style: oblique;
+  font-width: normal;
+}
+@font-face {
+  font-family: "ITC Avant Garde Pro";
+  src: url("/assets/fonts/ITCAvantGardePro/ITCAvantGardePro-XLt.otf");
+  font-weight: 200;
+  font-style: normal;
+  font-width: normal;
+}
+@font-face {
+  font-family: "ITC Avant Garde Pro";
+  src: url("/assets/fonts/ITCAvantGardePro/ITCAvantGardePro-XLtObl.otf");
+  font-weight: 200;
+  font-style: oblique;
+  font-width: normal;
+}

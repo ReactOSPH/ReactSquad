@@ -1,0 +1,21 @@
+.trailer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("/assets/images/web/ROSPH2026_bg.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .traiContain {
+    width: 50rem;
+    max-width: 100%;
+  }
+  img {
+    width: 20rem;
+    margin: 0 auto;
+  }
+}

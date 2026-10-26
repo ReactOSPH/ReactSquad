@@ -1,0 +1,16 @@
+/* IMPORTANT: responsive fontsize */
+@media screen and (max-width: 540px) {
+  body { font-size: normal; }
+}
+@media screen and (min-width: 540px) and (max-width: 1080px) {
+  body { font-size: large; }
+}
+@media screen and (min-width: 1080px) and (max-width: 1620px) {
+  body { font-size: larger; }
+}
+@media screen and (min-width: 1620px) and (max-width: 2160px) {
+  body { font-size: x-large; }
+}
+@media screen and (min-width: 2160px) {
+  body { font-size: xx-large; }
+}

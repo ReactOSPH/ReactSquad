@@ -15,6 +15,8 @@ jobs:
     steps:
     - name: Neocities + GitHub (GitHub Actions)
       uses: actions/checkout@main
+      with:
+        lfs: true
     # dist_dir is staged to Neocities
     - name: Publish to Neocities Repository
       uses: bcomnes/deploy-to-neocities@master
