@@ -1,10 +1,14 @@
 name: Publish to reactsquad.neocities.org
 
-# runs when committed to staging
+# runs when committed to prod
 on:
   workflow_dispatch:
   push:
     branches: ["staging"]
+    # run changes on a specific directory.
+    # time to bring that back somehow.
+    paths:
+      - 'prod/**'
 
 jobs:
   deploy:
@@ -14,7 +18,7 @@ jobs:
       uses: actions/checkout@main
       with:
         lfs: true
-    - name: Prepare blank index for cleanup
+    - name: Prepare blank index for cleanup # according to NeoCities, index.html **MUST NOT** be deleted
       run: |
         mkdir -p neocities-empty
         : > neocities-empty/index.html
@@ -24,7 +28,7 @@ jobs:
         api_key: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
         cleanup: true
         dist_dir: neocities-empty
-    - name: Remove remote directories
+    - name: Remove remote directories # DESTRUCTIVELY REMOVE EVERYTHING (except index.html)
       env:
         NEOCITIES_API_KEY: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
       run: |
@@ -47,11 +51,11 @@ jobs:
             https://neocities.org/api/delete)"
           printf '%s\n' "$delete_response" | jq -e '.result == "success"' > /dev/null
         fi
-    - name: Publish staging to Neocities
+    - name: Publish prod to Neocities
       uses: bcomnes/deploy-to-neocities@master
       with:
         api_key: ${{ secrets.NEOCITIES_API_REACTSQUAD }}
         cleanup: true
-        dist_dir: staging
+        dist_dir: prod
 
 # dependency workaround by bechnokid/neocities
